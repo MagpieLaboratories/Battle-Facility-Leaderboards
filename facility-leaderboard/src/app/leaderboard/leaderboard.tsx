@@ -105,7 +105,7 @@ export default function Leaderboard() {
                     <button
                         key={gen}
                         className={selectedGeneration === gen ? styles.activeBtn : ""}
-                        onClick={() => handleGenerationChange(gen)}
+                        onClick={() => {setSelectedCategories([]); handleGenerationChange(gen)}}
                     >
                         {GenerationLabels[index]}
                     </button>
@@ -117,7 +117,7 @@ export default function Leaderboard() {
                     <button
                         key={fmt}
                         className={selectedFormat === fmt ? styles.activeBtn : ""}
-                        onClick={() => handleFormatChange(fmt)}
+                        onClick={() => { setSelectedCategories([]); handleFormatChange(fmt)}}
                     >
                         {fmt}
                     </button>
@@ -132,7 +132,7 @@ export default function Leaderboard() {
                         <button
                             key={facility.id}
                             className={selectedFacility?.id === facility.id ? styles.activeBtn : ""}
-                            onClick={() => handleFacilityChange(facility)}
+                            onClick={() => { setSelectedCategories([]); handleFacilityChange(facility)}}
                         >
                             {facility.label}
                         </button>
