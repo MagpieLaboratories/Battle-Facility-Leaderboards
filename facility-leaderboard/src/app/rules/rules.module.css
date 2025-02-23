@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .intro {
+    text-align: center;
+  }
+  
+  .topNav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .recordsBtn,
+  .activeBtn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #444;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .activeBtn {
+    background-color: #0070f3;
+    color: white;
+  }
+  
+  .signInBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .accordion {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .accordionItem {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .accordionHeader {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+  }
+  
+  .accordionHeader:hover {
+    background-color: #555;
+  }
+  
+  .accordionContent {
+    background: #222;
+    color: white;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
