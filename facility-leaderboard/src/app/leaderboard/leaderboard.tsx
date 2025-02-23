@@ -12,8 +12,9 @@ import {
     GenerationLabels,
     BattleFormats,
     facilities,
+    discordLink,
 } from "../lib/constants";
-
+//freestand
 export default function Leaderboard() {
     const router = useRouter();
 
@@ -93,7 +94,10 @@ export default function Leaderboard() {
             <nav className={styles.topNav}>
                 <button className={styles.activeBtn}>Battle Facility Records</button>
                 <button onClick={() => router.push("/rules")}>Rules</button>
-                <button className={styles.signInBtn}>Sign In</button>
+                    <a href={discordLink} target="_blank" rel="noopener noreferrer" className={styles.discordBtn}>
+                    Discord
+                    </a>
+                {/* <button className={styles.signInBtn}>Sign In</button> */}
             </nav>
 
             <div className={styles.generationTabs}>
@@ -168,7 +172,7 @@ export default function Leaderboard() {
                             <th>Rank</th>
                             <th>Wins</th>
                             <th>Username</th>
-                            <th>UserID</th>
+                            {/* <th>UserID</th> */}
                             <th>Team Link</th>
                             <th>VOD Link</th>
                             <th>Category</th>
@@ -184,15 +188,15 @@ export default function Leaderboard() {
                                     <td>{rank}</td>
                                     <td>{record.wins}</td>
                                     <td>{record.username}</td>
-                                    <td>{record.userid}</td>
+                                    {/* <td>{record.userid}</td> */}
                                     <td>
-                                        <a href={record.teamlink} target="_blank" rel="noreferrer">
-                                            Team
+                                        <a style={{color: "#00FFF0", fontSize: "0.75rem"}}  href={record.teamlink} target="_blank" rel="noreferrer">
+                                            {record.teamlink}
                                         </a>
                                     </td>
                                     <td>
-                                        <a href={record.vodlink} target="_blank" rel="noreferrer">
-                                            VOD
+                                        <a style={{color: "#00FFF0", fontSize: "0.75rem"}} href={record.vodlink} target="_blank" rel="noreferrer">
+                                            {record.vodlink}
                                         </a>
                                     </td>
                                     <td>{record.category?.join(", ")}</td>

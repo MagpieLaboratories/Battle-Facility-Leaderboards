@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import AccordionItem from "./accordionItem";
 import styles from "./rules.module.css";
-
+import { discordLink } from "../lib/constants";
 type AccordionKeys =
     | "submissionRules"
     | "streaming"
@@ -37,10 +37,13 @@ export default function RulesPage() {
                 <button className={styles.recordsBtn} onClick={() => router.push("/leaderboard")}>
                     Battle Facility Records
                 </button>
-                <button className={styles.activeBtn} onClick={() => router.push("/rules")}>
+                <button className={styles.activeBtn} >
                     Rules
                 </button>
-                <button className={styles.signInBtn}>Sign In</button>
+                    <a href={discordLink} target="_blank" rel="noopener noreferrer" className={styles.discordBtn}>
+                    Discord
+                    </a>
+                {/* <button className={styles.signInBtn}>Sign In</button> */}
             </nav>
 
             <h1 className={styles.title}>Battle Facility Rules</h1>

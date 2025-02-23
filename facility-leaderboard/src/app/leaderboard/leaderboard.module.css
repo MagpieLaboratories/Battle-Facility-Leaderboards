@@ -38,6 +38,19 @@
     right: 10px;
     top: 10px;
   }
+
+.discordBtn {
+    background-color: #5865F2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .discordBtn:hover {
+    background-color: #4752C4;
+  }
   
   .generationTabs,
   .formatTabs {
@@ -77,13 +90,13 @@
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    background-color: #aaa;
+    background-color: #444;
     font-size: 14px;
     border-radius: 5px;
   }
   
   .facilityNavbar button.active {
-    background-color: #005bb5;
+    background-color: #003993;
     color: white;
   }
 .categoryFilter {
@@ -98,7 +111,7 @@
     padding: 8px 15px;
     border: none;
     cursor: pointer;
-    background-color: #777; 
+    background-color: #444; 
     color: white;
     font-size: 14px;
     border-radius: 5px;
@@ -173,20 +186,20 @@
   }
   
   .rank1 {
-    background-color: gold;
+    background-color: #a17f1a;
     color: black;
   }
   .rank2 {
-    background-color: silver !important;
+    background-color: #71706e !important;
     color: black;
   }
   .rank3 {
-    background-color: #cd7f32;
+    background-color: #804A00;
     color: black;
   }
   
   
   .activeBtn {
-    background-color: #0070f3 !important;
+    background-color: #003993 !important;
     color: white;
   }

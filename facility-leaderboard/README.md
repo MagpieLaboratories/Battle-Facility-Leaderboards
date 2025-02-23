@@ -1,6 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Contributing
+
+This is an open source project hosted at https://facility-leaderboard.web.app/leaderboard for the facility community. You can also find us on discord: https://discord.gg/7AfpxXArWv
+
+Any PR/ update/ enhancement is welcome. My only requirement is that it must build without errors (including lint) and -if it is a GUI change- that the majority of users would be for it.
+
+My assumption/ expectation is that contributors will be only interested in the src/app folders, as this is the actual functional front end
 
 ## Getting Started
+
+If you are new to nextJS, typescript, react, etc. - you will want to install npm/npx (or your choice of manager; it can be yarn etc) and then run 
+```bash
+npm install
+```
+In the root directory
 
 First, run the development server:
 
@@ -14,11 +26,19 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run/set up firebase:
+```bash
+firebase login
+firebase init
+firebase deploy
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Using your own backend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This application is expecting - and is linked to - a firestore backend. This can be replaced or deployed under a different firestore, but you will need to fill out .env.local params
+Firebase hosting is free under the static build of nextJS, which is what this website is setup for.
+
+Since the project is nextJS, a different host can work (update package.json) - but you may then be going with a different backend, which would require a re-write of the fetch processes in leaderboard.tsx
 
 ## Learn More
 
@@ -28,9 +48,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

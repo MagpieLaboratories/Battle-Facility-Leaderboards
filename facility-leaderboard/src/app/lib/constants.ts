@@ -14,6 +14,8 @@ export const GenerationLabels = ["Gen2", "Gen3", "Gen4", "Gen5", "Gen6", "Gen7",
 
 export const BattleFormats = ["Singles", "Doubles", "Multis"] as const;
 
+export const discordLink = "https://discord.gg/7AfpxXArWv" as const;
+
 export const facilities: Facility[] = [
   {
     id: "g4bts",
